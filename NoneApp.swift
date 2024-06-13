@@ -32,10 +32,11 @@ struct SplashView: View {
         VStack {
             Spacer()
             
-            Image(systemName: "square.fill")
+            Image("piano")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .scaleEffect(animate ? 1.5 : 1)
                 .foregroundColor(.blue)
                 .onAppear {
@@ -48,7 +49,7 @@ struct SplashView: View {
 
             Spacer()
             
-            Text("まらしぃアプリ")
+            Text("marasy App")
                 .font(.custom("HelveticaNeue-Bold", size: 25))
                 .bold()
                 .opacity(animate ? 1 : 0)
