@@ -48,12 +48,12 @@ struct ContentView1: View {
                     Text("制作者のSNS一覧")
                         .font(.headline)
                         .padding()
-                    Link(destination: URL(string: "https://x.com/teru_Cinnamon")!, label: {
+                    Link(destination: URL(string: "")!, label: {
                         Text("X(旧Twitter)")
                     })
                     .padding()
                     
-                    Link(destination: URL(string: "https://www.instagram.com/terutya_cinnamoroll/")!, label: {
+                    Link(destination: URL(string: "")!, label: {
                         Text("Instagram")
                     })
                     .padding(.bottom)
