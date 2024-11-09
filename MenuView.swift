@@ -16,9 +16,6 @@ struct MenuView: View {
                         NavigationLink(destination: NikonikoView()){
                             Text("まらしぃチャンネル　\n Niconico marasy's channel")
                         }
-//                        NavigationLink(destination: SiteView()){
-//                            Text("まらしぃオフィシャルサイト　\n marasy official website")
-//                        }
                         NavigationLink(destination: Site2View()){
                             Text("まらしぃ サークルオフィシャルサイト　\n marasy's circle official website")
                         }
