@@ -1,16 +1,18 @@
 import SwiftUI
 
 @main
-struct NoneApp: App {
+struct MarasyApp: App {
+    @StateObject var fontManager = FontManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(fontManager)
         }
     }
 }
 
 struct ContentView: View {
-    //スプラッシュ画面の表示を制御にするための状態変数
     @State private var showSplash = true
     
     var body: some View {
@@ -21,15 +23,13 @@ struct ContentView: View {
                 HomeView()
             }
         }
+        
     }
 }
 
 struct SplashView: View {
-    // ContentViewからスプラッシュ画面の表示を制御するためのバインディング
     @Binding var showSplash: Bool
-    //画像のアニメーションを制御するための状態変数
     @State private var animate = false
-    //画像の色変更アニメーションを制御するための状態変数
     @State private var colorchange = false
     
     var body: some View {
@@ -55,10 +55,10 @@ struct SplashView: View {
             
             Spacer()
             
-            Text("marasy App")
+            Text("まらしぃあぷり")
                 .font(.custom("HelveticaNeue-Bold", size: 30))
                 .bold()
-                .opacity(animate ? 1 : 0)    //animateの状態に応じて透明度の変更
+                .opacity(animate ? 2 : 2)    //animateの状態に応じて透明度の変更
                 .animation(.easeIn(duration: 1).delay(3), value: animate)    //透明度の変更をアニメーション
                 .onAppear {
                     //4秒の遅延後にHomeViewに遷移

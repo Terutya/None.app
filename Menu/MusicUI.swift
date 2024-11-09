@@ -51,3 +51,6 @@ struct WebView5: UIViewRepresentable {
     
     func updateUIView(_ uiView: WKWebView, context: Context) {}
 }
+#Preview {
+    MusicUI()
+}

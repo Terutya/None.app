@@ -1,3 +1,4 @@
+
 import SwiftUI
 import WebKit
 
@@ -12,32 +13,46 @@ struct ContentView1: View {
                     NavigationLink(destination: NikonikoView()){
                         Image("buttonImage4")
                             .resizable()
-                            .frame(width: 250 ,height: 250)
+                            .frame(width: 300 ,height: 300)
                             .padding()
                     }
-                    Text("↑")
-                    Text("こちらはニコニコ動画(Re: 仮)のサイトに繋がります。")
+                    Text("まらしぃチャンネル")
+//                    NavigationLink(destination: SiteView()) {
+//                        Image("buttonImage")
+//                            .resizable()
+//                            .frame(width: 450, height: 230)
+//                            .padding()
+//                    }
+                    NavigationLink(destination: Site2View()) {
+                        Image("buttonImage5")
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                            .padding()
+                    }
+                    Text("まらしぃ　サークルオフィシャルサイト")
+                    Spacer()
+                    NavigationLink(destination: Site3View()) {
+                        Image("buttonImage6")
+                            .resizable()
+                            .frame(width: 300, height: 320)
+                            .padding()
+                    }
+                    Text("CD & marasy Piano Live Asia Tour 2025サイト")
+
                     NavigationLink(destination: ePlusView()) {
                         Image("buttonImage2")
                             .resizable()
-                            .frame(width: 430, height: 260)
+                            .frame(width: 440, height: 270)
                             .padding()
                     }
+                    Text("まらしぃチケット情報")
+                    Spacer()
                     NavigationLink(destination: MusicUI()) {
                         Image("buttonImage3")
                             .resizable()
-                            .frame(width: 400, height: 225)
-                            .padding()
-                        
-                    }
-                    NavigationLink(destination: SiteView()) {
-                        Image("buttonImage")
-                            .resizable()
-                            .frame(width: 450, height: 230)
+                            .frame(width: 440, height: 270)
                             .padding()
                     }
-                    Text("↑")
-                    Text("こちらは現在繋がりません。ご了承ください。")
                 }
                 
                 ForEach(0..<10) { _ in
@@ -48,15 +63,31 @@ struct ContentView1: View {
                     Text("制作者のSNS一覧")
                         .font(.headline)
                         .padding()
-                    Link(destination: URL(string: "")!, label: {
-                        Text("X(旧Twitter)")
-                    })
-                    .padding()
                     
-                    Link(destination: URL(string: "")!, label: {
+                    Link(destination: URL(string: "https://x.com/teru_Cinnamon")!, label: {
+                        Text("X")
+                    })
+                    .padding(.bottom)
+                    
+                    Link(destination: URL(string: "https://www.instagram.com/terutya_cinnamoroll/")!, label: {
                         Text("Instagram")
                     })
                     .padding(.bottom)
+                    
+                    Link(destination: URL(string: "https://fiicen.jp/field/terutya_Cinnamon")!,
+                         label: {
+                        Text("Fiicen")
+                    })
+                    .padding(.bottom)
+
+                    Text("アプリのコード一覧")
+                        .font(.headline)
+                        .padding()
+                    
+                    Link(destination: URL(string: "https://github.com/Terutya/None.app")!,
+                         label: {
+                        Text("GitHub(外部サイトに接続します)")
+                    })
                 }
                 .navigationTitle("Home")
                 .toolbar {
@@ -80,4 +111,3 @@ struct ContentView1: View {
 #Preview {
     ContentView1()
 }
-

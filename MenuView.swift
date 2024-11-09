@@ -8,27 +8,42 @@ struct MenuView: View {
         NavigationView {
             VStack {
                 List {
-                    NavigationLink(destination: NoticeListView()) {
-                        Text("お知らせ\n Notice")
+                    Section(header: Text("メニュー")) {
+                        
+                        NavigationLink(destination: NoticeListView()) {
+                            Text("お知らせ\n Notice")
+                        }
+                        NavigationLink(destination: NikonikoView()){
+                            Text("まらしぃチャンネル　\n Niconico marasy's channel")
+                        }
+//                        NavigationLink(destination: SiteView()){
+//                            Text("まらしぃオフィシャルサイト　\n marasy official website")
+//                        }
+                        NavigationLink(destination: Site2View()){
+                            Text("まらしぃ サークルオフィシャルサイト　\n marasy's circle official website")
+                        }
+                        NavigationLink(destination: Site3View()){
+                            Text(" CD & marasy Piano Live Asia Tour 2025サイト \n Piano monkeys marasy & marasy Piano Live Asia Tour 2025 Website ")
+                        }
+                        NavigationLink(destination: ePlusView()){
+                            Text("チケット情報　\n Ticket information")
+                        }
+                        NavigationLink(destination: MusicUI()){
+                            Text("音楽配信サービス　\n Music Streaming Service")
+                        }
                     }
-                    if !isLoggedIn {
-                        NavigationLink(destination: SignInView(isLoggedIn: $isLoggedIn)) {
-                            Text("ログイン\n LogIn")
-                        }
-                    } else {
-                        NavigationLink(destination: MyAccountUI(isLoggedIn: $isLoggedIn)) {
-                            Text("マイページ\n Mypage")
-                        }
-                        NavigationLink(destination: LogOutUI(isLoggedIn: $isLoggedIn)) {
-                            Text("ログアウト\n LogOut")
+                    Section(header: Text("設定")){
+                        NavigationLink(destination: Setting()) {
+                            Text("アプリの設定\n App Setting")
                         }
                     }
-                    NavigationLink(destination: AppVerView()) {
-                        Text("バージョンの確認\n Version Confirmation")
+                    Section(header: Text("アプリ情報")){
+                        NavigationLink(destination: AppVerListView()) {
+                            Text("バージョンの確認\n Version Confirmation")
+                        }
                     }
                 }
                 .listStyle(GroupedListStyle())
-                .navigationTitle("メニュー")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {

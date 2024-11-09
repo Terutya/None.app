@@ -7,7 +7,6 @@ import SwiftUI
 import WebKit
 
 struct ePlusView: View {
-    //@State変数shouldReloadを使用してリロードフラグを管理
     @State private var shouldReload = false
     
     var body: some View {
