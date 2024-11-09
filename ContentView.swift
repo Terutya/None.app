@@ -64,18 +64,17 @@ struct ContentView1: View {
                         .font(.headline)
                         .padding()
                     
-                    Link(destination: URL(string: "https://x.com/teru_Cinnamon")!, label: {
+                    Link(destination: URL(string: "")!, label: {
                         Text("X")
                     })
                     .padding(.bottom)
                     
-                    Link(destination: URL(string: "https://www.instagram.com/terutya_cinnamoroll/")!, label: {
+                    Link(destination: URL(string: "")!, label: {
                         Text("Instagram")
                     })
                     .padding(.bottom)
                     
-                    Link(destination: URL(string: "https://fiicen.jp/field/terutya_Cinnamon")!,
-                         label: {
+                    Link(destination: URL(string: "")!, label: {
                         Text("Fiicen")
                     })
                     .padding(.bottom)
