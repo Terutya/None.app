@@ -17,12 +17,6 @@ struct ContentView1: View {
                             .padding()
                     }
                     Text("まらしぃチャンネル")
-//                    NavigationLink(destination: SiteView()) {
-//                        Image("buttonImage")
-//                            .resizable()
-//                            .frame(width: 450, height: 230)
-//                            .padding()
-//                    }
                     NavigationLink(destination: Site2View()) {
                         Image("buttonImage5")
                             .resizable()
